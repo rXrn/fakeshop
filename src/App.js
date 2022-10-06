@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Button, DatePicker } from "antd";
+import Navigation from "./components/layout/Navigation";
+import { useEffect } from "react";
+import TestLayout from "./components/layout/TestLayout";
+import { Products } from "./components/pages/Products";
+import { Outlet } from "react-router-dom";
 
+<Button className=""></Button>;
 function App() {
+  useEffect(() => {
+    document.title = "Fake Shop";
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <link
+        rel="shortcut icon"
+        type="image/vnd.microsoft.icon"
+        href="/assets/favicon.ico"
+      />
+      <Navigation>Home</Navigation>
+      <Outlet />
+    </>
   );
 }
 
